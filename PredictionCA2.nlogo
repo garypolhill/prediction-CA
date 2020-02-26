@@ -440,10 +440,12 @@ end
 ; Return a string representing the predictability of this patch
 
 to-report predictability
-  if (- pycor) <= initial-step [
+  if (- pycor) < initial-step or ((- pycor) = initial-step and influenced-by-edge?)
+    or ((- pycor) >= data-start-step and (- pycor) <= data-stop-step and (pxcor < data-min-pxcor or pxcor > data-max-pxcor)) [
     report "initial"
   ]
-  if (- pycor) >= data-start-step and (- pycor) <= data-stop-step [
+  if ((- pycor) = initial-step and not influenced-by-edge?)
+    or ((- pycor) >= data-start-step and (- pycor) <= data-stop-step and pxcor >= data-min-pxcor and pxcor <= data-max-pxcor) [
     report "data"
   ]
   if not computed? [
@@ -703,21 +705,8 @@ to visualize
       ]
     ]
   ] (prd = "data") [
-    set pcolor ifelse-value (data-state = 0) [
-      ifelse-value (pxcor >= data-min-pxcor and pxcor <= data-max-pxcor) [zero-data] [
-        ifelse-value (influenced-by-edge?) [zero-colour] [zero-region]
-      ]
-    ] [
-      ifelse-value (data-state = 1) [
-        ifelse-value (pxcor >= data-min-pxcor and pxcor <= data-max-pxcor) [one-data] [
-          ifelse-value (influenced-by-edge?) [one-colour] [one-region]
-        ]
-      ]
-      [
-        ifelse-value (pxcor >= data-min-pxcor and pxcor <= data-max-pxcor) [two-data] [
-          ifelse-value (influenced-by-edge?) [two-colour] [two-region]
-        ]
-      ]
+    set pcolor ifelse-value (data-state = 0) [zero-data] [
+      ifelse-value (data-state = 1) [one-data] [two-data]
     ]
   ] [
     let inv-n-states 1 / n-states
@@ -923,7 +912,7 @@ SWITCH
 80
 synchronize?
 synchronize?
-1
+0
 1
 -1000
 
@@ -2277,6 +2266,10 @@ Wolfram, S. (1983): Cellular Automata. Los Alamos Science 9, 2–21
     <http://www.gnu.org/philosophy/why-not-lgpl.html>.
 
 ## ChangeLog
+
+2020-02-26 Gary Polhill
+
+  * Modified `visualize` and `predictability` so that the `initial-step` row not `influenced-by-edge?` would be presented as though it is data -- which, depending on how far ahead the prediction is wanted, it is.
 
 2020-02-24 Gary Polhill
 
