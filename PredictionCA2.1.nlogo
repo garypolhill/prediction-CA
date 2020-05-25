@@ -2787,7 +2787,7 @@ NetLogo 6.1.1
     <enumeratedValueSet variable="one-region">
       <value value="115"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="continue-if-real-eliminated">
+    <enumeratedValueSet variable="continue-if-real-eliminated?">
       <value value="true"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="data-start-step">
@@ -2934,7 +2934,7 @@ NetLogo 6.1.1
     <enumeratedValueSet variable="one-region">
       <value value="115"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="continue-if-real-eliminated">
+    <enumeratedValueSet variable="continue-if-real-eliminated?">
       <value value="true"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="data-start-step">
@@ -3082,7 +3082,7 @@ NetLogo 6.1.1
     <enumeratedValueSet variable="one-region">
       <value value="115"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="continue-if-real-eliminated">
+    <enumeratedValueSet variable="continue-if-real-eliminated?">
       <value value="true"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="data-start-step">
@@ -3230,7 +3230,7 @@ NetLogo 6.1.1
     <enumeratedValueSet variable="one-region">
       <value value="115"/>
     </enumeratedValueSet>
-    <enumeratedValueSet variable="continue-if-real-eliminated">
+    <enumeratedValueSet variable="continue-if-real-eliminated?">
       <value value="true"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="data-start-step">
