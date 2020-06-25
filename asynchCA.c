@@ -350,17 +350,22 @@ step_t *next_step(step_t *prev, int sync) {
   for(i = prev; i != NULL; i = i->tail) {
     int j;
     int *sched;
+    state_t *asynch_state;
 
     j = 0;
-    while(next(&sched, &j)) {
-      state_t *asynch_state;
-
-      asynch_state = run_ca(i->state, sched, sync);
-
-      nxt = push_step(asynch_state, nxt);
-
-      if(sync) break;
+    if(sync) {
+      next(&sched, &j);
     }
+    else {
+      while(next(&sched, &j)) {
+        asynch_state = run_ca(i->state, sched, sync);
+
+        nxt = push_step(asynch_state, nxt);
+      }
+    }
+    asynch_state = run_ca(i->state, sched, sync);
+
+    nxt = push_step(asynch_state, nxt);
 
     free(sched);
   }
