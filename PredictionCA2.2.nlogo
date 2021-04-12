@@ -4032,6 +4032,133 @@ NetLogo 6.1.1
       <value value="0.5"/>
     </enumeratedValueSet>
   </experiment>
+  <experiment name="data-version-space" repetitions="100" runMetricsEveryStep="false">
+    <setup>initialize</setup>
+    <go>go</go>
+    <timeLimit steps="30"/>
+    <metric>n-eliminated</metric>
+    <enumeratedValueSet variable="one-region">
+      <value value="115"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="data-start-step">
+      <value value="21"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="data-stop-step">
+      <value value="21"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="ga?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="max-elim">
+      <value value="50"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="min-right">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="zero-region">
+      <value value="113"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="asym-reg">
+      <value value="26"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="invar-col">
+      <value value="53"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="continue-if-real-eliminated?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <steppedValueSet variable="max-data" first="1" step="1" last="40"/>
+    <enumeratedValueSet variable="one-colour">
+      <value value="5"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="log10-tolerance">
+      <value value="-6"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="n-states">
+      <value value="2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="zero-data">
+      <value value="85"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="omiss-data">
+      <value value="48"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="zero-colour">
+      <value value="2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="order-sample-size">
+      <value value="750"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="invar-data">
+      <value value="58"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="omiss-col">
+      <value value="43"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="synchronize?">
+      <value value="true"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="sym-data">
+      <value value="18"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="sym-reg">
+      <value value="16"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="rand-rule?">
+      <value value="false"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="two-region">
+      <value value="118"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="asym-col">
+      <value value="23"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="omiss-reg">
+      <value value="46"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-step">
+      <value value="20"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="two-colour">
+      <value value="8"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="real-rule">
+      <value value="110"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="one-data">
+      <value value="87"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="sym-col">
+      <value value="13"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="p-mutate">
+      <value value="0.2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="max-gen">
+      <value value="10"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="asym-data">
+      <value value="28"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="invar-reg">
+      <value value="56"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="radius">
+      <value value="1"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="two-data">
+      <value value="89"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="p-crossover">
+      <value value="0.4"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="rule-sample-size">
+      <value value="260"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="p-zero">
+      <value value="0.5"/>
+    </enumeratedValueSet>
+  </experiment>
 </experiments>
 @#$#@#$#@
 @#$#@#$#@
